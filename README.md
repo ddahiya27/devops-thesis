@@ -1,2 +1,2 @@
-# devops-thesis
-Final semester thesis for masters in computer science
+# DevOps implmentation for mock Java Application
+
