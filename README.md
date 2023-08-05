@@ -1,5 +1,7 @@
 # DevOps implementation for mock Java Application
 
+test commit
+
 Application is bootstrapped using Spring boot framework which is a popular project scaffolding choice in enterprise applications. This is a mock application implementing REST API to store and manipulate collection of `Employee` objects. Data is stored and queried using in memory database H2.
 
 Additionally HATEOS plugin for spring framework is also setup which helps in auto generation of links in REST responses that allows automated navigation of API.
