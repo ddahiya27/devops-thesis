@@ -80,9 +80,13 @@ jobs:
         with:
           name: PayrollApp
           path: payrollapp.jar
+      - uses: benjlevesque/short-sha@v2.2
+        id: short-sha
+        with:
+          length: 6
       - name: Docker build
         run: |
-          docker build . -t ddahiya27/payrollapp:${{ github.sha }}
+          docker build . -t ddahiya27/payrollapp:${{ env.SHA }}
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
@@ -90,4 +94,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Docker push
         run: |
-          docker push ddahiya27/payrollapp:${{ github.sha }}
+          docker push ddahiya27/payrollapp:${{ env.SHA }}
