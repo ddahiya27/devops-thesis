@@ -71,7 +71,7 @@ jobs:
           retention-days: 1
 
   package_and_publish:
-    name: Build and Push Image
+    name: Package and Publish Image
     runs-on: ubuntu-latest
     needs: [ build ]
     steps:
